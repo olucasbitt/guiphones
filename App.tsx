@@ -26,6 +26,10 @@ const App: React.FC = () => {
 	  
         <Hero onSimulateClick={scrollToSimulator} />
         
+		<div id="about">
+          <About />
+        </div>
+		
         <div id="beneficios">
           <Benefits />
         </div>
