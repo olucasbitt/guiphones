@@ -22,13 +22,13 @@ const App: React.FC = () => {
       <Navbar onSimulateClick={scrollToSimulator} />
       
       <main>
-		<About onSimulateClick={scrollToSimulator} />
-	  
-        <Hero onSimulateClick={scrollToSimulator} />
-        
 		<div id="about">
           <About />
         </div>
+	  
+        <Hero onSimulateClick={scrollToSimulator} />
+        
+		
 		
         <div id="beneficios">
           <Benefits />
