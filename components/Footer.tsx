@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold">Links Úteis</h4>
             <ul className="space-y-4 text-sm text-white/40">
               <li><a href="#" className="hover:text-gold transition-colors">Quem Somos</a></li>
-              <li><a href="#" className="hover:text-gold transition-colors">Como Funciona o Boleto</a></li>
+              <li><a href="#boleto" className="hover:text-gold transition-colors">Como Funciona o Boleto</a></li>
               <li><a href="#" className="hover:text-gold transition-colors">Perguntas Frequentes</a></li>
               <li><a href="#" className="hover:text-gold transition-colors">Termos de Uso</a></li>
             </ul>

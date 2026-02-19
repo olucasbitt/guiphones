@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
+import About from './components/about';
 import Hero from './components/Hero';
 import Simulator from './components/Simulator';
 import Benefits from './components/Benefits';
@@ -21,6 +22,8 @@ const App: React.FC = () => {
       <Navbar onSimulateClick={scrollToSimulator} />
       
       <main>
+		<About onSimulateClick={scrollToSimulator} />
+	  
         <Hero onSimulateClick={scrollToSimulator} />
         
         <div id="beneficios">

@@ -8,7 +8,7 @@ interface HeroProps {
 
 const Hero: React.FC<HeroProps> = ({ onSimulateClick }) => {
   return (
-    <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
+    <section id="boleto" className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-yellow-500/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-0 left-0 w-[300px] h-[300px] bg-yellow-500/5 rounded-full blur-[100px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({ onSimulateClick }) => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-yellow-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-yellow-500"></span>
               </span>
-              Estoque renovado
+              Ofertas imperdíveis
             </div>
             
             <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6">
