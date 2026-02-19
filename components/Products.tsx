@@ -4,39 +4,39 @@ import React from 'react';
 const products = [
   {
     id: 1,
-    name: 'iPhone 15 Pro Max',
-    brand: 'Apple',
-    price: 'R$ 8.499',
-    installment: '18x de R$ 560',
-    image: 'https://picsum.photos/seed/iphone15/400/500',
-    color: 'Natural Titanium'
+    name: 'Smart10',
+    brand: 'Infinix',
+    price: 'R$ 699',
+    installment: '12x de R$ 100',
+    image: 'img/infinix10.png',
+    color: 'Azul'
   },
   {
     id: 2,
-    name: 'Galaxy S24 Ultra',
+    name: 'Galaxy A07',
     brand: 'Samsung',
-    price: 'R$ 6.899',
-    installment: '18x de R$ 450',
-    image: 'https://picsum.photos/seed/s24u/400/500',
-    color: 'Titanium Gray'
+    price: 'R$ 1.599',
+    installment: '18x de R$ 111',
+    image: 'img/galaxyA07.jpeg',
+    color: 'Preto / Prata'
   },
   {
     id: 3,
-    name: 'Realme GT 5',
+    name: 'C75',
     brand: 'Realme',
-    price: 'R$ 3.200',
+    price: 'R$ 1.149',
     installment: '18x de R$ 210',
-    image: 'https://picsum.photos/seed/realmegt/400/500',
-    color: 'Cyber Black'
+    image: 'img/realmec75.png',
+    color: 'Grafite'
   },
   {
     id: 4,
-    name: 'iPhone 13',
-    brand: 'Apple',
-    price: 'R$ 3.899',
-    installment: '18x de R$ 260',
-    image: 'https://picsum.photos/seed/iphone13/400/500',
-    color: 'Midnight'
+    name: 'Note 60x',
+    brand: 'Realme',
+    price: 'R$ 549',
+    installment: '18x de R$ 50',
+    image: 'img/note60x.png',
+    color: 'Preto'
   }
 ];
 

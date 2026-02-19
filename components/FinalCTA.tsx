@@ -30,7 +30,7 @@ const FinalCTA: React.FC = () => {
               className="px-10 py-6 rounded-2xl gold-gradient text-black font-black text-xl hover:scale-105 transition-all shadow-xl shadow-yellow-500/20 flex items-center justify-center gap-3"
             >
               <MessageCircle size={28} />
-              Fazer simulação agora
+              Fale com nossos vendedores
             </a>
           </div>
           
