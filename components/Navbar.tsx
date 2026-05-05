@@ -17,9 +17,11 @@ const Navbar: React.FC<NavbarProps> = ({ onSimulateClick }) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass py-4 border-b border-white/10" : "py-6"
-      }`}
+      className={`
+        fixed top-0 left-0 right-0 z-50
+        transition-all duration-300
+        ${isScrolled ? "bg-black/80 backdrop-blur-lg border-b border-white/10 py-3" : "bg-transparent py-6"}
+      `}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
 
@@ -28,15 +30,15 @@ const Navbar: React.FC<NavbarProps> = ({ onSimulateClick }) => {
           <div className="w-10 h-10 gold-gradient rounded-xl flex items-center justify-center shadow-lg shadow-yellow-500/20">
             <Smartphone className="text-black" size={22} />
           </div>
+
           <span className="text-xl font-bold tracking-tight">
-            Gui<span className="text-gold">phones</span>
+            Gui<span className="text-yellow-500">phones</span>
           </span>
         </div>
 
         {/* DESKTOP */}
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-6">
 
-          {/* WhatsApp */}
           <a
             href="https://wa.me/555181383681"
             target="_blank"
@@ -47,10 +49,9 @@ const Navbar: React.FC<NavbarProps> = ({ onSimulateClick }) => {
             WhatsApp
           </a>
 
-          {/* CTA principal */}
           <button
             onClick={onSimulateClick}
-            className="px-6 py-3 rounded-full gold-gradient text-black font-bold text-sm hover:scale-105 active:scale-95 transition shadow-lg shadow-yellow-500/10"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold text-sm hover:scale-[1.05] active:scale-95 transition shadow-lg shadow-yellow-500/10"
           >
             Simular agora
           </button>
@@ -68,15 +69,14 @@ const Navbar: React.FC<NavbarProps> = ({ onSimulateClick }) => {
 
       {/* MOBILE MENU */}
       {isMobileOpen && (
-        <div className="md:hidden glass border-b border-white/10 px-6 py-6">
-
+        <div className="md:hidden bg-black/95 backdrop-blur-lg border-b border-white/10 px-6 py-6">
           <div className="flex flex-col gap-4">
 
             <a
               href="https://wa.me/555181383681"
               target="_blank"
               rel="noreferrer"
-              className="text-white/80 flex items-center gap-2"
+              className="flex items-center gap-2 text-white/80"
               onClick={() => setIsMobileOpen(false)}
             >
               <MessageCircle size={16} className="text-green-500" />
@@ -88,13 +88,12 @@ const Navbar: React.FC<NavbarProps> = ({ onSimulateClick }) => {
                 onSimulateClick();
                 setIsMobileOpen(false);
               }}
-              className="w-full py-4 rounded-2xl gold-gradient text-black font-bold"
+              className="w-full py-4 rounded-2xl bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold"
             >
               Simular agora
             </button>
 
           </div>
-
         </div>
       )}
     </nav>

@@ -1,51 +1,40 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import LeadForm from './components/LeadForm';
-import Benefits from './components/Benefits';
-import Products from './components/Products';
-import Testimonials from './components/Testimonials';
+import About from './components/About';
+import OwnerVideo from './components/OwnerVideo';   
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
+
   const openLeadForm = () => {
-    const el = document.getElementById("lead-form");
-    el?.scrollIntoView({ behavior: "smooth" });
+    const el = document.getElementById("simulador");
+
+    if (el) {
+      const yOffset = -100; // altura aproximada do navbar
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
     <div className="min-h-screen selection:bg-yellow-500/30">
-      
+
       <Navbar onSimulateClick={openLeadForm} />
 
       <main>
 
-        {/* HERO */}
         <Hero onStart={openLeadForm} />
 
-        {/* LEAD FORM (NÚCLEO DO FUNIL) */}
-        <div id="lead-form">
-          <LeadForm />
-        </div>
+        <About />
+        <OwnerVideo />  
 
-        {/* BENEFITS */}
-        <div id="beneficios">
-          <Benefits />
+        {/* SEÇÃO FINAL UNIFICADA */}
+        <div id="simulador">
+          <FinalCTA />
         </div>
-
-        {/* PRODUCTS (APÓS QUALIFICAÇÃO) */}
-        <div id="produtos">
-          <Products onStart={openLeadForm} />
-        </div>
-
-        {/* TESTIMONIALS */}
-        <div id="depoimentos">
-          <Testimonials />
-        </div>
-
-        {/* FINAL CTA */}
-        <FinalCTA />
 
       </main>
 
