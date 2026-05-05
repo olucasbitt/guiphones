@@ -1,9 +1,7 @@
-
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
-import About from './components/about';
 import Hero from './components/Hero';
-import Simulator from './components/Simulator';
+import LeadForm from './components/LeadForm';
 import Benefits from './components/Benefits';
 import Products from './components/Products';
 import Testimonials from './components/Testimonials';
@@ -11,45 +9,48 @@ import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
-  const simulatorRef = useRef<HTMLDivElement>(null);
-
-  const scrollToSimulator = () => {
-    simulatorRef.current?.scrollIntoView({ behavior: 'smooth' });
+  const openLeadForm = () => {
+    const el = document.getElementById("lead-form");
+    el?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="min-h-screen selection:bg-yellow-500/30">
-      <Navbar onSimulateClick={scrollToSimulator} />
       
+      <Navbar onSimulateClick={openLeadForm} />
+
       <main>
-		<div id="about">
-          <About />
+
+        {/* HERO */}
+        <Hero onStart={openLeadForm} />
+
+        {/* LEAD FORM (NÚCLEO DO FUNIL) */}
+        <div id="lead-form">
+          <LeadForm />
         </div>
-	  
-        <Hero onSimulateClick={scrollToSimulator} />
-        
-		
-		
+
+        {/* BENEFITS */}
         <div id="beneficios">
           <Benefits />
         </div>
 
-        <div ref={simulatorRef} id="simulador" className="py-20 bg-black">
-          <Simulator />
-        </div>
-
+        {/* PRODUCTS (APÓS QUALIFICAÇÃO) */}
         <div id="produtos">
-          <Products onSimulateClick={scrollToSimulator} />
+          <Products onStart={openLeadForm} />
         </div>
 
+        {/* TESTIMONIALS */}
         <div id="depoimentos">
           <Testimonials />
         </div>
 
+        {/* FINAL CTA */}
         <FinalCTA />
+
       </main>
 
       <Footer />
+
     </div>
   );
 };

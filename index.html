@@ -1,14 +1,30 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guiphones | O Smartphone dos seus sonhos no boleto</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Guiphones | Celulares no boleto com aprovação facilitada</title>
+
+    <meta name="description" content="Compre seu iPhone ou smartphone no boleto com aprovação rápida. Sem cartão de crédito e com parcelamento facilitado." />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guiphones | Celulares no boleto" />
+    <meta property="og:description" content="Aprovação facilitada e parcelamento no boleto." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/img/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+
+    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND (ok para MVP, mas ideal migrar depois para build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <style>
       body {
         font-family: 'Inter', sans-serif;
@@ -16,52 +32,34 @@
         color: #FFFFFF;
         overflow-x: hidden;
       }
+
       .glass {
         background: rgba(255, 255, 255, 0.03);
         backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
+
       .gold-gradient {
         background: linear-gradient(135deg, #E6B800 0%, #FFD700 100%);
       }
-      .text-gold {
-        color: #E6B800;
-      }
-      .border-gold {
-        border-color: #E6B800;
-      }
-      .bg-graphite {
-        background-color: #1A1A1A;
-      }
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0A0A0A;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444;
-      }
+
+      .text-gold { color: #E6B800; }
+      .bg-graphite { background-color: #1A1A1A; }
     </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.575.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <!-- PIXEL (EXEMPLO) -->
+    <script>
+      // Meta Pixel placeholder
+      // fbq('track', 'PageView');
+    </script>
+
+  </head>
+
   <body>
+
     <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
+
+    <script type="module" src="/index.tsx"></script>
+
+  </body>
 </html>
