@@ -8,7 +8,7 @@ const About = () => {
 
         <div className="grid md:grid-cols-2 gap-14 items-center">
 
-          {/* TEXTO */}
+          {/* TEXTO  */}
           <div>
 
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
